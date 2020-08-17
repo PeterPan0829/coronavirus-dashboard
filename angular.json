@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "coronavirus-dashboard"
+    }
+  },
+  "defaultProject": "coronavirus-dashboard",
+  "cli": {
+    "analytics": "7a55aaa2-604d-4bf0-97dc-00b34b384a35"
+  }
 }
