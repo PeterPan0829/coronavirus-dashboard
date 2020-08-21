@@ -21,7 +21,7 @@ export class CountriesComponent implements OnInit {
   selectedCountryData: DateWiseData[];
   countries: string[] = [];
   dateWiseData;
-  loading = true;
+  loading: Boolean = true;
   options: {
     height: 500,
     animation: {
@@ -49,7 +49,7 @@ export class CountriesComponent implements OnInit {
     ).subscribe(
       {
         complete: () => {
-          this.updateValues('India');
+          this.updateValues('Taiwan*');
           this.loading = false;
         }
       }
