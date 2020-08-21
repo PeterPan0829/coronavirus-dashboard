@@ -21,7 +21,10 @@ export class CountriesComponent implements OnInit {
   selectedCountryData: DateWiseData[];
   countries: string[] = [];
   dateWiseData;
+  // datatable = [];
   loading: Boolean = true;
+
+  // !! MUST FIX THIS BUG!!
   options: {
     height: 500,
     animation: {
@@ -29,6 +32,21 @@ export class CountriesComponent implements OnInit {
       easing: 'out',
     },
   };
+
+  // !! MUST FIX THIS BUG!!
+  // chart = {
+  //   PieChart: "PieChart",
+  //   ColumnChart: 'ColumnChart',
+  //   LineChart: "LineChart",
+  //   height: 500,
+  //   options: {
+  //     animation: {
+  //       duration: 1000,
+  //       easing: 'out',
+  //     },
+  //     is3D: true
+  //   }
+  // };
 
   constructor(private service: DataServiceService) { }
 
@@ -65,8 +83,6 @@ export class CountriesComponent implements OnInit {
     this.selectedCountryData.forEach(cs => {
       dataTable.push([cs.date, cs.cases]);
     });
-
-
   }
 
   updateValues(country: string) {
